@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ProductActivity">
+
+        <TextView
+            android:id="@+id/textViewQuantitySet"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/oemAftermGroup"
+            app:layout_constraintTop_toBottomOf="@+id/textViewQuantityCaption"
+            tools:text="Q" />
+
+    <TextView
+        android:id="@+id/textViewTotalSet"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewAvarageSet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalCaption"
+        tools:text=" Total" />
+
+    <TextView
+        android:id="@+id/textViewAvarageSet"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantitySet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAvarageCaption" />
+
+    <TextView
+        android:id="@+id/textViewAvarageCaption"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="  Avarage"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantityCaption"
+        app:layout_constraintTop_toTopOf="@+id/textViewQuantityCaption" />
+
+    <TextView
+        android:id="@+id/textViewTotalCaption"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="   Total"
+        app:layout_constraintStart_toEndOf="@+id/textViewAvarageCaption"
+        app:layout_constraintTop_toTopOf="@+id/textViewAvarageCaption" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/oem_one_type_quant"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+
+        android:hint="Quantity"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonEOM"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonEOM">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/oem_price"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+
+        android:hint="Price"
+        app:layout_constraintStart_toEndOf="@+id/oem_one_type_quant"
+        app:layout_constraintTop_toTopOf="@+id/oem_one_type_quant">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_metod_payment"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Method of Payment"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupPayment"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonNotes" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_notes"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:hint="Notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNotes"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonNotes">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|start"
+        android:maxLines="10"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+            android:textSize="10sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPayment"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:checkedButton="@+id/radioCash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_metod_payment">
+
+        <RadioButton
+            android:id="@+id/radioCash"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Cash" />
+
+        <RadioButton
+            android:id="@+id/radioCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Check" />
+
+        <RadioButton
+            android:id="@+id/radioWire"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Wire" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAddPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Picture "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oemAftermGroup" />
+
+    <TextView
+        android:id="@+id/textViewDisclosure"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="70dp"
+        android:text="Disclosure"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroupPayment"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textViewTimeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="   Time/Date \n Geolocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDisclosure" />
+
+    <TextView
+        android:id="@+id/textViewSignature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Signature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupPayment" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEOM"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/textViewAddPicture"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddPicture"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAddElement"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/oem_price"
+        app:layout_constraintTop_toTopOf="@+id/oem_price"
+        app:srcCompat="@drawable/ic_baseline_list_add" />
+
+    <RadioGroup
+        android:id="@+id/oemAftermGroup"
+        android:layout_width="115dp"
+        android:layout_height="60dp"
+        android:checkedButton="@+id/radioButtonOEM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonOEM"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Oem" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAftermarket"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Aftermarket" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="2dp"
+        android:padding="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonEOM"
+        android:background="@drawable/black_border"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <TextView
+        android:id="@+id/textViewQuantityCaption"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="  Quantity"
+        app:layout_constraintStart_toEndOf="@+id/oemAftermGroup"
+        app:layout_constraintTop_toTopOf="@+id/oemAftermGroup" />
+
+    <TextView
+        android:id="@+id/text111"
+        android:layout_width="360dp"
+        android:layout_height="160dp"
+        android:background="@drawable/black_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeDate" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNotes"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:srcCompat="@drawable/ic_baseline_add_a_photo" />
+
+
+        <us.productcorebuyer.corebuyer.DrawView
+            android:id="@+id/draw_view"
+            android:layout_width="356dp"
+            android:layout_height="156dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTimeDate" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

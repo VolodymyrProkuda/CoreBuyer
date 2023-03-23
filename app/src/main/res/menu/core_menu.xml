@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id_createPDF"
+        android:icon="@drawable/ic_baseline_picture_as_pdf"
+        android:title="CreatePDF"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/id_email"
+        android:icon="@drawable/ic_baseline_email"
+        android:title="Email"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/id_print"
+        android:icon="@drawable/ic_print"
+        android:title="Print"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/id_save"
+        android:icon="@drawable/ic_baseline_save"
+        android:title="Save"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/id_forward"
+        android:icon="@drawable/ic_baseline_arrow_forward"
+        android:title="Forward"
+        app:showAsAction="always" />
+</menu>
